@@ -1,0 +1,33 @@
+h1 { font-size: 10%; }
+
+/*'hides' nav footer and any video to prints*/
+nav,footer,video{
+  display:none;
+}
+
+a:after {
+  content: " (" attr(href) ")";
+  font-size: 80%;
+}
+
+/*every anchor tab that starts with http or https, do this*/
+a[href^="http://"]:after, a[href^="https://"]:after {
+ content: " (" attr(href) ")";
+}
+
+/*every anchor tab that starts with a #, for example a link to elsewhere on the page*/
+a[href^="#"]:after {
+ content: "";
+}
+
+body {
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+article {
+  width: 90%;
+}
